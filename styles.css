@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Roboto+Condensed:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url(asset/Background\ Black.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment:fixed;
+}
+
+.navbar-toggler {
+  margin-left: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn.btn-success {
+    background-color: #9db253;
+}
+
+.footer {
+  position: relative;;
+  color: #fff;
+  background-color: #9db253;
+  font-weight: 600;
+  text-align: center;
+  padding: 15px;
+  bottom: 0;
+  width: 100%;
+}
+
+/*Main Home*/
+
+main {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.Home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.home-content {
+  max-width: 700px;
+  width: 100%;
+}
+
+.profile-image {
+  order: 2; 
+}
+
+.profile-image img {
+  max-width: 350px;
+float: right;
+}
+
+.btn {
+    margin-left: -10px;
+}
+
+.home-content h1,
+.home-content span,
+.home-content p,
+.home-content .btn {
+  animation: fadeIn 1s ease forwards;
+  color: #fff;
+}
+
+.home-content h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.home-content span {
+  font-size: 25px;
+  font-weight: 700;
+  color: #9db253;
+}
+
+.home-content p {
+  font-size: 20px;
+  margin: 20px 0 40px;
+}
+
+.home-content p a {
+  color: #9db253;
+}
+
+.home-content .btn {
+  display: inline-block;
+  color: #9db253;
+  font-size: 25px;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+
+.home-content .btn:hover {
+  color: #fff;
+  border-color: transparent;
+  text-shadow: 0 0 20px #9db253;
+}
+
+/*Main About*/
+
+#about {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+#about .about-content {
+  max-width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-left: 60px;
+  margin-right: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px; 
+  padding: 20px; 
+}
+
+#about h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#about span {
+  font-size: 50px;
+  font-weight: 700;
+  color: #9db253;
+}
+
+#about p {
+  font-size: 16px;
+  margin-top: 40px;
+  color: #fff;
+  text-align: start;
+}
+
+#about li {
+  font-size: 16px;
+  margin-top: 20px;
+  color: #fff;
+  text-align: start;
+}
+
+#audio-player {
+  justify-content: center;
+  align-items: center;
+  margin: 0 50px ;
+  margin-bottom: 20px;
+  outline: none;
+  opacity: .5;
+}
+
+
+/* Chat Popup*/
+
+.chat-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #9db253;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+/* CSS untuk popup chat */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: 450px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  animation: slideIn .5s ease;
+}
+
+/* CSS untuk tombol close di popup chat */
+.chat-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#closeChat.active {
+  animation: slideOut 0.5s ease; /* Menentukan animasi dan durasinya */
+}
+
+.chat-popup-header {
+  background-color: #9db253;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.chat-form {
+  padding: 10px;
+}
+
+.chat-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.chat-form input,
+.chat-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 2px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.chat-form button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+}
+
+.chat-form button:hover {
+  background-color: #20a84d;
+}
+
+
+@media screen and (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .navbar-toggler {
+    margin-left: 10px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .navbar-brand {
+    margin-right: 10px;
+  }
+
+  .offcanvas-header {
+    text-align: center;
+  }
+
+  .offcanvas-header img {
+    width: 80px;
+  }
+
+  .offcanvas-body {
+    padding: 10px;
+  }
+
+  .navbar-nav.flex-column {
+    margin-top: 20px;
+  }
+
+  .d-flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-control {
+    margin-left: -5px;
+    margin-bottom: 10px;
+  }
+
+  .Home {
+    align-items: center; /* Align content to the top */
+  }
+
+  .home-content {
+    text-align: center;
+    margin-top: 40%;
+  }
+
+  .profile-image {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  .profile-image img {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
+  }
+
+  .home-content h1 {
+    font-size: 40px;
+  }
+
+  .home-content span,
+  .home-content p,
+  .home-content .btn {
+    font-size: 16px;
+  }
+
+  .chat-toggle-btn {
+    right: 10px;
+  }
+
+
+
+  
+
+
+
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
