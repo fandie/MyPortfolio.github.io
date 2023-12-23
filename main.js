@@ -1,5 +1,6 @@
 const player = new Plyr('#myAudio');
 
+
 var typed = new Typed(".multiple-text", {
     strings: ["Frontend Web Developer", "Data Scientist", "Social Media Specialist"],
     typeSpeed: 70,
@@ -25,3 +26,5 @@ $(document).ready(function(){
       $(this).tab('show');
   });
 });
+
+//Music
