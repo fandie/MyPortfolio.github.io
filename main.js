@@ -21,7 +21,9 @@ function updateClock() {
   var now = new Date();
   var hours = now.getHours();
   var minutes = now.getMinutes();
-    
+  var seconds = now.getSeconds();
+
+  // Menambahkan 0 di depan angka jika kurang dari 10
   hours = hours < 10 ? "0" + hours : hours;
   minutes = minutes < 10 ? "0" + minutes : minutes;
  
@@ -30,5 +32,9 @@ function updateClock() {
 
   document.getElementById("clock").textContent = timeString;
 }
+
+// Memanggil fungsi updateClock setiap detik
 setInterval(updateClock, 1000);
+
+// Memanggil updateClock untuk pertama kali saat halaman dimuat
 updateClock();
