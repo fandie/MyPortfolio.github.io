@@ -444,11 +444,16 @@ main {
     margin-left: 0;
     margin-right: 0;
 }
+  .Journey-content {
+  width: 100%;
+  margin-top: -20%;
+}
+.accordion-flush {
+  max-width: 100%;
+}
 }
 
   
-
-
 
 
 @keyframes slideIn {
