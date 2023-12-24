@@ -21,7 +21,6 @@ body {
 
 #clock {
   font-size: 36px;
-  color: #fff;
   color: #9db253;
 }
 
@@ -70,6 +69,7 @@ main {
 .home-content {
   max-width: 700px;
   width: 100%;
+  margin-top: 10%;
 }
 
 .profile-image {
@@ -303,7 +303,7 @@ main {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 10px; 
-  padding: 60px
+  padding: 40px
 }
 .Journey-content h1 {
   color: #fff;
@@ -344,7 +344,6 @@ main {
 .crendential a{
   color: #3498db;
 }
-
 
 @media (max-width: 992px) {
   .header {
@@ -450,16 +449,17 @@ main {
     margin-left: 0;
     margin-right: 0;
 }
-  .Journey-content {
+.Journey-content {
   width: 100%;
   margin-top: -20%;
 }
 .accordion-flush {
   max-width: 100%;
 }
-}
 
   
+
+
 
 
 @keyframes slideIn {
