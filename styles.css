@@ -19,6 +19,12 @@ body {
   margin-left: 20px;
 }
 
+#clock {
+  font-size: 36px;
+  color: #fff;
+  color: #9db253;
+}
+
 .logo {
   width: 100px;
   height: auto;
