@@ -19,10 +19,43 @@ body {
   margin-left: 20px;
 }
 
-#clock {
-  font-size: 36px;
-  color: #9db253;
+.wrapper {
+  display: grid;
+  height: 50px;
+  width: 200px;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 10px;
+  cursor: none;
+  margin: 0 auto;
+  animation: animate 1.5s linear infinite;
 }
+.wrapper .display,
+.wrapper span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper .display {
+  background: #1b1b1b;
+  z-index: 999;
+  height: 35px;
+  width: 190px;
+  border-radius: 6px;
+  text-align: center;
+}
+.wrapper .display #time {
+  line-height: 35px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 1.5s linear infinite;
+}
+
 
 .logo {
   width: 100px;
@@ -39,11 +72,11 @@ body {
   position: relative;;
   color: #fff;
   background-color: #9db253;
-  font-weight: 600;
   text-align: center;
   padding: 15px;
   bottom: 0;
   width: 100%;
+  font-size: 15px;
 }
 
 /*Main Home*/
@@ -127,31 +160,64 @@ main {
   text-shadow: 0 0 20px #9db253;
 }
 
-.socmed a i {
-  color:#fff;
-  display: inline-flex;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20%;
-  margin-right: 10px;
-  transition: transform 0.4s cubic-bezier(.39,.575,.565,1.000), border 0.4s cubic-bezier(.39,.575,.565,1.000), border-radius 0.4s cubic-bezier(.39,.575,.565,1.000);
+.socmed .btn-socmed{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  margin-top: 10%;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, .1);
+  transition: all 0.3s ease-out;
+}
+.socmed .btn-socmed:hover{
+  width: 200px;
+}
+.socmed .btn-socmed .icon{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all .3s ease-out;
+}
+.socmed .btn-socmed:nth-child(1):hover .icon{
+  background: #0e76a8;
+}
+.socmed .btn-socmed:nth-child(2):hover .icon{
+  background: #171515 ;
+}
+.socmed .btn-socmed:nth-child(3):hover .icon{
+  background: #E1306c;
 }
 
-.socmed a i:hover {
-  transform: scale(1.3); /* Scaling up sebanyak 20% */
-  border: 2px solid #9db253;
-  border-radius: 0%; /* Ubah warna border saat dihover */
-  background: #fff;
-  color: #000;
+.socmed .btn-socmed .icon i{
+  font-size: 30px;
+  line-height: 60px;
+  transition: all .3s ease-out;
 }
-.socmed a i:last-child {
-  margin-right: 10px;
-  margin-left: 10px;
+.socmed .btn-socmed:hover .icon i{
+  color: #fff;
+}
+.socmed .btn-socmed a {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 15px;
+}
+.socmed .btn-socmed:nth-child(1):hover a{
+  color: #0e76a8;
+}
+.socmed .btn-socmed:nth-child(2):hover a{
+  color: #171515 ;
+}
+.socmed .btn-socmed:nth-child(3):hover a{
+  color: #E1306c;
 }
 
 /*Main About*/
@@ -345,6 +411,119 @@ main {
   color: #3498db;
 }
 
+
+/*Project*/
+#project {
+  padding: 50px 0;
+  background-color: #333;
+}
+.Project .container-project span{
+  color: #9db253;
+  font-weight: 600;
+  font-size: 50px;
+}
+.container-project h1 {
+  color: #fff;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.project-list {
+  display: flex;
+  grid-gap: 30px;
+  margin-top: 50px;
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), cyan);
+  border-radius: 10px;
+  color: #fff;
+  padding: 0 40px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.layer a {
+  margin-top: 0px;
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.layer p {
+  font-size: 20px;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+
+iframe {
+  width: 80%;
+  height: 80vh;
+  border: none;
+}
+
+ .btn-survey {
+  width: 100%;
+  padding: 15px 30px;
+  font-size: 32px;
+  font-weight: 600;
+  background-color: #61dafb;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-survey:hover {
+  background-color: #4fa3d1;
+}
+
+/*Breakout*/
 @media (max-width: 992px) {
   .header {
     padding: 1.3rem 5%;
@@ -451,13 +630,20 @@ main {
 }
 .Journey-content {
   width: 100%;
-  margin-top: -20%;
+  margin-top: -10%;
 }
 .accordion-flush {
   max-width: 100%;
 }
-
-  
+.Project{
+  margin-top: -10px;
+}
+.project-list {
+  display: grid;
+  max-width: 70%;
+  margin: 0 auto;
+}
+}
 
 
 
@@ -497,5 +683,10 @@ main {
   }
   100% {
     transform: scale(1.2);
+  }
+}
+@keyframes animate {
+  100%{
+      filter: hue-rotate(360deg);
   }
 }
