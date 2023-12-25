@@ -32,5 +32,5 @@ setInterval(() => {
 }, 1000);
 
 function redirectToSurvey() {
-  window.location.href = "https://l6qacye6rq6.typeform.com/to/ygUll2WD";
+  window.open("https://l6qacye6rq6.typeform.com/to/ygUll2WD", "_blank");
 }
