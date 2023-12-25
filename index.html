@@ -59,7 +59,13 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div id="clock"></div>
+                <div class="wrapper">
+                    <div class="display">
+                        <div id="time"></div>
+                    </div>
+                    <span></span>
+                    <span></span>
+                </div>
                 <a class="navbar-brand" href="#home">
                     <img src="asset/MyLogo.png" alt="logo" class="logo">
                 </a>
@@ -84,27 +90,25 @@
                                     My Jurney
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="#education">Education</a></li>
+                                    <li><a class="dropdown-item" href="#journey">Education</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#experience">Experience</a></li>
+                                    <li><a class="dropdown-item" href="#journey">Experience</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#certification">Certification</a></li>
+                                    <li><a class="dropdown-item" href="#journey">Certification</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#project">My Project</a>
                             </li>
+                            <li><a class="nav-link" href="#survey">Go to Survey</a></li>
                         </ul>
-
-
                     </div>
-
                     <footer class="footer">
-                        <p>&copy; by Fandi Prasetyo 2023.</p>
+                        <p>Create by Fandi Prasetyo | &copy; 2023 All right reserved.</p>
                     </footer>
                 </div>
         </nav>
@@ -118,13 +122,24 @@
                 <span class="multiple-text"></span>
                 <p>Welcome to my website, I love sharing my stories and accomplishments of my creative projects. Find
                     more information about me <a href="#about">here</a></p>
-                <a href="https://drive.google.com/file/d/1DLgXQ-FAG5C2oVZ5ijWKIQNxtHfSfSzQ/view?usp=sharing" class="btn"
+                <a href="https://drive.google.com/file/d/1P4jX2bFuNyyNCJ0BTiRlzmeBXA5kDd0x/view?usp=sharing" class="btn"
                     target="_blank">Download CV</a>
 
                 <div class="socmed">
-                    <a href="https://www.linkedin.com/in/fandi-prasetyo/"><i class='bx bxl-linkedin-square'></i></a>
-                    <a href="https://github.com/fandie"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.instagram.com/fandipraes/"><i class='bx bxl-instagram'></i></a>
+                    <div class="btn-socmed">
+                        <div class="icon" href="https://www.linkedin.com/in/fandi-prasetyo/"><i
+                                class='bx bxl-linkedin-square'></i></div>
+                        <a>Linkedin</a>
+                    </div>
+                    <div class="btn-socmed">
+                        <div class="icon" href="https://github.com/fandie"><i class='bx bxl-github'></i></div>
+                        <a>github</a>
+                    </div>
+                    <div class="btn-socmed">
+                        <div class="icon" href="https://www.instagram.com/fandipraes/"><i class='bx bxl-instagram'></i>
+                        </div>
+                        <a>Instagram</a>
+                    </div>
                 </div>
             </div>
             <div class="profile-image">
@@ -413,6 +428,44 @@
                     </div>
                 </div>
         </section>
+
+        <section class="Project" id="project">
+            <div class="container-project">
+                <h1 class="sub-tittle"><span>My</span> Project</h1>
+                <div class="project-list">
+                    <div class="work">
+                        <img src="asset/Programer.jpg" alt="programer">
+                        <div class="layer">
+                            <h3>Programing</h3>
+                            <p>Check out my repository projects on github</p>
+                            <a href="https://github.com/fandie?tab=repositories" target="_blank"><i
+                                    class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="asset/Analyst.jpg" alt="analyst">
+                        <div class="layer">
+                            <h3>Data Science</h3>
+                            <p>Take a look at the analysis projects I did on Kaggle's public dataset.</p>
+                            <a href="https://www.kaggle.com/fandipras/Code" target="_blank"><i
+                                    class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="asset/Social Media 2.jpg" alt="social media">
+                        <div class="layer">
+                            <h3>Social Media</h3>
+                            <p>Take a look at the simple tutorial content I do on my Instagram</p>
+                            <a href="https://www.instagram.com/fandipraes/" target="_blank"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <button id="survey" class="btn-survey" onclick="redirectToSurvey()">Take the Survey</button>
+
     </main>
 
 
@@ -427,5 +480,4 @@
     <script src="main.js"></script>
 
 </body>
-
 </html>
