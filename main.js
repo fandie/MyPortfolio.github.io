@@ -17,24 +17,20 @@ $(document).ready(function(){
   });
 });
 
-function updateClock() {
-  var now = new Date();
-  var hours = now.getHours();
-  var minutes = now.getMinutes();
-  var seconds = now.getSeconds();
 
-  // Menambahkan 0 di depan angka jika kurang dari 10
+//Fungsi Jam digital
+setInterval(() => {
+  const time = document.querySelector("#time");
+  let date = new Date();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+
   hours = hours < 10 ? "0" + hours : hours;
   minutes = minutes < 10 ? "0" + minutes : minutes;
- 
 
-  var timeString = hours + ":" + minutes;
+  time.textContent = hours + ":" + minutes;
+}, 1000);
 
-  document.getElementById("clock").textContent = timeString;
+function redirectToSurvey() {
+  window.location.href = "https://l6qacye6rq6.typeform.com/to/ygUll2WD";
 }
-
-// Memanggil fungsi updateClock setiap detik
-setInterval(updateClock, 1000);
-
-// Memanggil updateClock untuk pertama kali saat halaman dimuat
-updateClock();
