@@ -17,6 +17,7 @@ body {
 
 .navbar-toggler {
   margin-left: 20px;
+  margin-top: 10px;
 }
 
 .wrapper {
@@ -28,6 +29,7 @@ body {
   cursor: none;
   margin: 0 auto;
   animation: animate 1.5s linear infinite;
+  margin-bottom: 20px;
 }
 .wrapper .display,
 .wrapper span {
@@ -55,19 +57,19 @@ body {
   -webkit-text-fill-color: transparent;
   animation: animate 1.5s linear infinite;
 }
-
-
 .logo {
   width: 100px;
-  height: auto;
+  height: 40px;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
 }
-
 .btn.btn-success {
     background-color: #9db253;
 }
-
+.offcanvas-header{
+  margin-top: 10px;
+}
 .footer {
   position: relative;;
   color: #fff;
@@ -77,6 +79,11 @@ body {
   bottom: 0;
   width: 100%;
   font-size: 15px;
+}
+
+#google_translate_element {
+  display: inline-block !important;
+  margin-top: 40px;
 }
 
 /*Main Home*/
@@ -176,10 +183,10 @@ main {
 .socmed .btn-socmed:hover{
   width: 200px;
 }
-.socmed .btn-socmed .icon{
+.socmed .btn-socmed .icon {
   display: inline-block;
   height: 60px;
-  width: 60px;
+  width: 30px;
   text-align: center;
   border-radius: 50px;
   box-sizing: border-box;
@@ -198,6 +205,7 @@ main {
 
 .socmed .btn-socmed .icon i{
   font-size: 30px;
+  color: #000;
   line-height: 60px;
   transition: all .3s ease-out;
 }
@@ -206,6 +214,7 @@ main {
 }
 .socmed .btn-socmed a {
   font-size: 20px;
+  text-decoration: none;
   font-weight: 500;
   line-height: 60px;
   margin-left: 15px;
