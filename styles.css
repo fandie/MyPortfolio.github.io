@@ -20,43 +20,6 @@ body {
   margin-top: 10px;
 }
 
-.wrapper {
-  display: flex;
-  height: 50px;
-  width: 200px;
-  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
-  border-radius: 10px;
-  cursor: none;
-  margin: 0 auto;
-  animation: animate 1.5s linear infinite;
-  margin-bottom: 20px;
-}
-.wrapper .display,
-.wrapper span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.wrapper .display {
-  background: #1b1b1b;
-  z-index: 999;
-  height: 35px;
-  width: 190px;
-  border-radius: 6px;
-  text-align: center;
-}
-.wrapper .display #time {
-  line-height: 35px;
-  color: #fff;
-  font-size: 35px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animate 1.5s linear infinite;
-}
 .logo {
   width: 100px;
   height: 40px;
