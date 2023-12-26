@@ -19,7 +19,6 @@ body {
   margin-left: 20px;
   margin-top: 10px;
 }
-
 .logo {
   width: 100px;
   height: 40px;
@@ -474,26 +473,6 @@ main {
   height: 100%;
 }
 
-iframe {
-  width: 80%;
-  height: 80vh;
-  border: none;
-}
-
- .btn-survey {
-  width: 100%;
-  padding: 15px 30px;
-  font-size: 32px;
-  font-weight: 600;
-  background-color: #61dafb;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-survey:hover {
-  background-color: #4fa3d1;
-}
 
 /*Breakout*/
 @media (max-width: 992px) {
