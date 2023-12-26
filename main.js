@@ -17,20 +17,6 @@ $(document).ready(function(){
   });
 });
 
-
-//Fungsi Jam digital
-setInterval(() => {
-  const time = document.querySelector("#time");
-  let date = new Date();
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-
-  hours = hours < 10 ? "0" + hours : hours;
-  minutes = minutes < 10 ? "0" + minutes : minutes;
-
-  time.textContent = hours + ":" + minutes;
-}, 1000);
-
 function redirectToSurvey() {
   window.open("https://l6qacye6rq6.typeform.com/to/ygUll2WD", "_blank");
 }
